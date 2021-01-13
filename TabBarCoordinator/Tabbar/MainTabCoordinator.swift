@@ -73,7 +73,6 @@ extension MainTabCoordinator {
     }
     
     func logout() {
-        removeAllChildren()
         parentCoordinator?.logout()
     }
 }
