@@ -41,14 +41,14 @@ extension CategoriesCoordinator {
 
     func startMusic() {
         let musicCoordinator = MusicCoordinator(navigation: navigationController, parentCoordinator: self)
-        musicCoordinator.start()
         addChild(musicCoordinator)
+        musicCoordinator.start()
     }
     
     func startFood() {
         let foodCoordinator = FoodCoordinator(navigation: navigationController, parentCoordinator: self)
-        foodCoordinator.start()
         addChild(foodCoordinator)
+        foodCoordinator.start()
     }
     
     func changeTabHomeDeep() {

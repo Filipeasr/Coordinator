@@ -11,7 +11,6 @@ class AppCoordinator: Coordinator {
     
     //MARK: Private Properties
 
-    weak private var parentCoordinator: Coordinator?
     weak private var window: UIWindow?
 
     //MARK: Init
@@ -27,7 +26,7 @@ class AppCoordinator: Coordinator {
 
     func start() {
         
-        if isLoged() {
+        if isLogged() {
             startMainTabBar()
         } else {
             startLogin()
@@ -67,7 +66,7 @@ extension AppCoordinator {
         tabbarCoordinator.start()
     }
     
-    private func isLoged() -> Bool {
+    private func isLogged() -> Bool {
         return UserDefaults.standard.bool(forKey: "isLogged")
     }
 }
